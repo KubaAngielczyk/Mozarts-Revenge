@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
     public float timeBetweenShots;
     private float shotCounter;
     public static PlayerController instance;
+    public SpriteRenderer bodySR;
+    private float activeMoveSpeed;
+    public float dashSpeed = 8f, dashLength = 0.5f, dashCooldown = 1f, dashInvincibility = 0.5f;
+    
+    [HideInInspector]
+    public float dashCounter, dashCoolCounter;
 
     private void Awake()
     {
@@ -24,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theCam = Camera.main;
+        activeMoveSpeed = moveSpeed;
     }
 
     
@@ -34,7 +41,7 @@ public class PlayerController : MonoBehaviour
         moveInput.Normalize();
         
 
-        theRB.velocity = moveInput * moveSpeed;
+        theRB.velocity = moveInput * activeMoveSpeed;
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
@@ -70,7 +77,32 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            {
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashLength;
+                anim.SetTrigger("dash");
 
+                PlayerHPController.instance.MakeInvincible(dashInvincibility);
+            }
+        }
+        
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+            if(dashCounter <= 0)
+            {
+                activeMoveSpeed = moveSpeed;
+                dashCoolCounter = dashCooldown;
+            }
+        }
+
+        if(dashCoolCounter > 0)
+        {
+            dashCoolCounter -= Time.deltaTime;
+        }
 
 
 

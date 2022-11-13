@@ -9,7 +9,16 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed;
     public float rangeToChasePlayer;
     private Vector3 moveDirection;
-    // Start is called before the first frame update
+    public Animator anim;
+    public int health = 150;
+    public GameObject[] deathSplatters;
+    public GameObject hitEffect;
+    public bool shouldShoot;
+    public GameObject bullet;
+    public Transform firePoint;
+    public float fireRate;
+    private float fireCounter;
+    public SpriteRenderer theBody;
     void Start()
     {
         
@@ -17,18 +26,61 @@ public class EnemyController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer)
+    {    if(PlayerController.instance.gameObject.activeInHierarchy)
         {
-            moveDirection = PlayerController.instance.transform.position - transform.position;
+            if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer)
+            {
+                moveDirection = PlayerController.instance.transform.position - transform.position;
+            }
+            else
+            {
+                moveDirection = Vector3.zero;
+            }
+
+            moveDirection.Normalize();
+
+            theRB.velocity = moveDirection * moveSpeed;
+
+            if (moveDirection != Vector3.zero)
+            {
+                anim.SetBool("isMoving", true);
+            }
+            else
+            {
+                anim.SetBool("isMoving", false);
+            }
+
+            if (shouldShoot)
+            {
+                fireCounter -= Time.deltaTime;
+                if (fireCounter <= 0)
+                {
+                    fireCounter = fireRate;
+                    Instantiate(bullet, firePoint.position, firePoint.rotation);
+                }
+            }
         }
         else
         {
-            moveDirection = Vector3.zero;
+            theRB.velocity = Vector2.zero;
         }
+    }
+    public void DamageEnemy(int damage)
+    {
+        Instantiate(hitEffect, transform.position, transform.rotation);
+        health -= damage;
+        AudioManager.instance.PlaySFX(2);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
 
-        moveDirection.Normalize();
+            AudioManager.instance.PlaySFX(1);
 
-            theRB.velocity = moveDirection * moveSpeed;
+            int selectedSplatter = Random.Range(0, deathSplatters.Length);
+            int rotation = Random.Range(0, 4);
+            Instantiate(deathSplatters[selectedSplatter], transform.position, Quaternion.Euler(0f, 0f, rotation * 90f));
+
+            //Instantiate(deathSplatter, transform.position, transform.rotation);
+        }
     }
 }

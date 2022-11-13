@@ -45,7 +45,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -269,14 +268,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Breakable_6: 546535986855887430
-      Breakable_0: 4098156409588004937
-      Breakable_5: -2796105001415810770
-      Breakable_4: 2834888629653501596
-      Breakable_1: -5688956413077253491
-      Breakable_2: 4053375744630672729
-      Breakable_3: -4990361253961035843
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

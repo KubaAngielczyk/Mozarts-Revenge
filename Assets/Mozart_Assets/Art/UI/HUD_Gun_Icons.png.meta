@@ -45,7 +45,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -269,14 +268,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      HUD_Gun_Icons_0: 262978286505467586
-      HUD_Gun_Icons_5: 1547619706621703405
-      HUD_Gun_Icons_1: 141494655013890540
-      HUD_Gun_Icons_3: -2480382951315576201
-      HUD_Gun_Icons_4: -3940896912681915257
-      HUD_Gun_Icons_2: -2172343002418747524
-      HUD_Gun_Icons_6: -1209311266236218547
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

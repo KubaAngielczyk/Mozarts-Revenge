@@ -42,7 +42,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -245,13 +244,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Level Objects_0: 443781331472107259
-      Level Objects_5: 444756885432138965
-      Level Objects_3: -15828895975527741
-      Level Objects_2: 5321197001264935029
-      Level Objects_1: 5041813583268518508
-      Level Objects_4: -4538526825993207092
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
