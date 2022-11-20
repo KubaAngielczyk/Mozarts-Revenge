@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1506658363
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1079986425290739939, guid: 56faa61c0738e9b43b0b5aa082c87bb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,6 +101,7 @@ MonoBehaviour:
   speed: 10
   theRB: {fileID: 961162528752043869}
   damageToGive: 30
+  impactEffect: {fileID: 4013538728355837720, guid: df29bed758e91be4586ea337a6c70a45, type: 3}
 --- !u!61 &961162528752043868
 BoxCollider2D:
   m_ObjectHideFlags: 0
