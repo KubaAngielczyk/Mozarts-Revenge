@@ -110,6 +110,7 @@ MonoBehaviour:
   itemsToDrop:
   - {fileID: 5791864128525931036, guid: 8412e5cae0c83134ab5a723968a2908c, type: 3}
   itemDropPercent: 10
+  breakSound: 0
 --- !u!114 &1288014969474860710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,5 +147,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8125, y: 1}
+  m_Size: {x: 0.72, y: 0.76}
   m_EdgeRadius: 0
