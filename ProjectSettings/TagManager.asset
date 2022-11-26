@@ -16,9 +16,9 @@ TagManager:
   - PlayerBullet
   - EnemyBullet
   - Enemy
-  - IgnoreROom
-  - 
-  - 
+  - Breakables
+  - Ignore Bullets
+  - Pickups
   - 
   - 
   - 
