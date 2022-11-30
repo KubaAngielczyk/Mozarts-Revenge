@@ -31,6 +31,7 @@ public class EnemyController : MonoBehaviour
             if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer)
             {
                 moveDirection = PlayerController.instance.transform.position - transform.position;
+                shouldShoot = true;
             }
             else
             {

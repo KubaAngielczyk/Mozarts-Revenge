@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 7442649814160499735, guid: 27bc33d5769b9fc4d92e86f5a709ad2e, type: 3}
   - {fileID: 913820886689505199, guid: 9a1cdbc5cf46ff44285e671b558052fb, type: 3}
   hitEffect: {fileID: 5913837534266958241, guid: c90a1628dc288e64eb1f9437940e06be, type: 3}
-  shouldShoot: 1
+  shouldShoot: 0
   bullet: {fileID: 4244313616292099479, guid: 17032da41d4522d45885cfc6e984c8e0, type: 3}
   firePoint: {fileID: 7104033941934310716}
   fireRate: 0.2
