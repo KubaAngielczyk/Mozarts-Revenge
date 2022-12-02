@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     
     [HideInInspector]
     public float dashCounter, dashCoolCounter;
-
+    [HideInInspector]
+    public bool canMove = true;
     private void Awake()
     {
         instance = this;
@@ -36,87 +37,94 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-        moveInput.Normalize();
-        
-
-        theRB.velocity = moveInput * activeMoveSpeed;
-
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
-        if(mousePos.x < screenPoint.x)
+        if (canMove)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            gunArm.localScale = new Vector3(-1f, -1f, 1f);
-        }
-        else
-        {
-            transform.localScale = Vector3.one;
-            gunArm.localScale = Vector3.one;
-        }
-        //rotate gunArm
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+            moveInput.Normalize();
 
-        Vector2 offset = new Vector2(mousePos.x - screenPoint.x, mousePos.y - screenPoint.y);
-        float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-        gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-            shotCounter = timeBetweenShots;
-        }
+            theRB.velocity = moveInput * activeMoveSpeed;
 
-        if (Input.GetMouseButton(0))
-        {
-            shotCounter -= Time.deltaTime;
-            if(shotCounter <= 0)
+            Vector3 mousePos = Input.mousePosition;
+            Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
+            if (mousePos.x < screenPoint.x)
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+                gunArm.localScale = new Vector3(-1f, -1f, 1f);
+            }
+            else
+            {
+                transform.localScale = Vector3.one;
+                gunArm.localScale = Vector3.one;
+            }
+            //rotate gunArm
+
+            Vector2 offset = new Vector2(mousePos.x - screenPoint.x, mousePos.y - screenPoint.y);
+            float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+            gunArm.rotation = Quaternion.Euler(0, 0, angle);
+
+            if (Input.GetMouseButtonDown(0))
             {
                 Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
                 shotCounter = timeBetweenShots;
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            if (Input.GetMouseButton(0))
             {
-                activeMoveSpeed = dashSpeed;
-                dashCounter = dashLength;
-                anim.SetTrigger("dash");
-
-                PlayerHPController.instance.MakeInvincible(dashInvincibility);
+                shotCounter -= Time.deltaTime;
+                if (shotCounter <= 0)
+                {
+                    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
+                    shotCounter = timeBetweenShots;
+                }
             }
-        }
-        
-        if (dashCounter > 0)
-        {
-            dashCounter -= Time.deltaTime;
-            if(dashCounter <= 0)
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                activeMoveSpeed = moveSpeed;
-                dashCoolCounter = dashCooldown;
+                if (dashCoolCounter <= 0 && dashCounter <= 0)
+                {
+                    activeMoveSpeed = dashSpeed;
+                    dashCounter = dashLength;
+                    anim.SetTrigger("dash");
+
+                    PlayerHPController.instance.MakeInvincible(dashInvincibility);
+                }
             }
-        }
 
-        if(dashCoolCounter > 0)
-        {
-            dashCoolCounter -= Time.deltaTime;
-        }
+            if (dashCounter > 0)
+            {
+                dashCounter -= Time.deltaTime;
+                if (dashCounter <= 0)
+                {
+                    activeMoveSpeed = moveSpeed;
+                    dashCoolCounter = dashCooldown;
+                }
+            }
+
+            if (dashCoolCounter > 0)
+            {
+                dashCoolCounter -= Time.deltaTime;
+            }
 
 
 
 
 
 
-        if(moveInput != Vector2.zero)
-        {
-            anim.SetBool("isMoving", true);
+            if (moveInput != Vector2.zero)
+            {
+                anim.SetBool("isMoving", true);
+            }
+            else
+            {
+                anim.SetBool("isMoving", false);
+            }
         }
         else
         {
+            theRB.velocity = Vector2.zero;
             anim.SetBool("isMoving", false);
         }
-
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dungeon 2 Tiles_49
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -1717622624588848094, guid: 0ffb38ae7757b0d458841358c17b7fb6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6156863, g: 0.6156863, b: 0.6156863, a: 1}
   m_Transform:
     e00: 1
     e01: 0
