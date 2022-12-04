@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 88.57
+  orthographic size: 108.14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -271,11 +271,27 @@ MonoBehaviour:
   distanceToEnd: 10
   generatorPoint: {fileID: 1185126733}
   selectedDirection: 0
-  xOffset: 18
-  yOffset: 10
+  xOffset: 35
+  yOffset: 17
   whatIsRoom:
     serializedVersion: 2
     m_Bits: 16384
+  rooms:
+    singleUp: {fileID: 498802535390434766, guid: 174d04956d486994fb945039dc53b576, type: 3}
+    singleDown: {fileID: 8769431479849954723, guid: 93ede85dc314acf4b8e098680f4471bc, type: 3}
+    singleRight: {fileID: 1720333162685367406, guid: cad3113143456844496c889c082a081d, type: 3}
+    singleLeft: {fileID: 5033378972568051899, guid: 3c3767073b27ddc45860ec8a6a337716, type: 3}
+    doubleUpDown: {fileID: 108845361852801047, guid: fa00ec23fd040f24f9c8a2819c9a4196, type: 3}
+    doubleLeftRight: {fileID: 6109385159972485738, guid: bb406e04719a8a147a78ee332e74f74c, type: 3}
+    doubleUpRight: {fileID: 754787941926053292, guid: 72197d58fe50ed94ba5efbfa3b642f3d, type: 3}
+    doubleRightDown: {fileID: 1166735513590303179, guid: e2f9b64bf2a93894e88cfdd345da8ea6, type: 3}
+    doubleDownLeft: {fileID: 8030902496857917474, guid: 0a6fb35c0d69cbc40af0ffa994b13860, type: 3}
+    doubleLeftUp: {fileID: 7483223574922234210, guid: 307161424a448f44db65cb4c222ffa3a, type: 3}
+    tripleUpRightDown: {fileID: 8710458382326929066, guid: 0d270cecb3f7bf74385eadd1c6af2de0, type: 3}
+    tripleRightDownLeft: {fileID: 242930291368336671, guid: 6e4feef13d8b9914bb464f809580995f, type: 3}
+    tripleDownLeftUp: {fileID: 1949337538240826493, guid: 9aeabee7627fcdc4c886dd0b51f8666f, type: 3}
+    tripleLeftUpRight: {fileID: 7824703498765122022, guid: 6850ac77c36b2084fbc3fcb9a418ec07, type: 3}
+    fourway: {fileID: 7463924910843984643, guid: f37acec06187e0d46ae1d53097498ccc, type: 3}
 --- !u!4 &1809498157
 Transform:
   m_ObjectHideFlags: 0
