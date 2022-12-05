@@ -271,8 +271,8 @@ MonoBehaviour:
   distanceToEnd: 10
   generatorPoint: {fileID: 1185126733}
   selectedDirection: 0
-  xOffset: 36
-  yOffset: 19
+  xOffset: 36.5
+  yOffset: 21
   whatIsRoom:
     serializedVersion: 2
     m_Bits: 16384
