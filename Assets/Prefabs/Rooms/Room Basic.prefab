@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 240145836}
   - component: {fileID: 240145837}
   - component: {fileID: 240145838}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Room Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,9 +72,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeWhenEntered: 0
-  openWhenEnemiesCleared: 0
   doors: []
-  enemies: []
+  roomActive: 0
 --- !u!212 &240145838
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560303432}
   - component: {fileID: 560303433}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: DingDong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +220,7 @@ GameObject:
   - component: {fileID: 1080179068}
   - component: {fileID: 1080179067}
   - component: {fileID: 1080179066}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Dore_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +331,7 @@ GameObject:
   - component: {fileID: 1948612917}
   - component: {fileID: 1948612916}
   - component: {fileID: 1948612915}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Door_Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648376112960642097}
   - component: {fileID: 648376112960642096}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +488,7 @@ GameObject:
   - component: {fileID: 648376113053333497}
   - component: {fileID: 648376113053333496}
   - component: {fileID: 648376113053333499}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8091,7 +8090,7 @@ GameObject:
   - component: {fileID: 648376113465482732}
   - component: {fileID: 382604611}
   - component: {fileID: 6851839652282412856}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Room Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8150,12 +8149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeWhenEntered: 1
-  openWhenEnemiesCleared: 0
   doors:
   - {fileID: 1948612914}
   - {fileID: 1080179065}
-  enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  roomActive: 0

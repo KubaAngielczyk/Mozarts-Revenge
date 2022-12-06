@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7351656245468057414}
   - component: {fileID: 7351656245468057413}
   - component: {fileID: 7351656245468057412}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room UL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471ed99546794a4990a688d32f98df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEntered: 1
+  closeWhenEntered: 0
   doors:
   - {fileID: 7351656247344300015}
   - {fileID: 7351656246633784661}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 7351656246633784664}
   - component: {fileID: 7351656246633784663}
   - component: {fileID: 7351656246633784662}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Dore_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 7351656247249973273}
   - component: {fileID: 7351656247249973272}
   - component: {fileID: 7351656247249973271}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7351656247338115946}
   - component: {fileID: 7351656247338115947}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DingDong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,13 +405,13 @@ GameObject:
   - component: {fileID: 7351656247344300018}
   - component: {fileID: 7351656247344300017}
   - component: {fileID: 7351656247344300016}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Door_Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7351656247344300018
 Transform:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 8401978803347516942}
   - component: {fileID: 8401978803347516943}
   - component: {fileID: 8401978803347516940}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8401978803347516939}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -864,23 +864,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 8401978803347516942}
-    m_ColliderPaths:
-    - - X: -30000000
-        Y: 90000000
-      - X: 40000000
-        Y: 90000000
-      - X: 40000000
-        Y: 100000000
-      - X: -30000000
-        Y: 100000000
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 3.999971, y: 9}
-      - {x: 3.999971, y: 10}
-      - {x: -3, y: 9.99997}
-      - {x: -2.999971, y: 9}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &8401978804023022930
@@ -897,7 +883,7 @@ GameObject:
   - component: {fileID: 8401978804023022934}
   - component: {fileID: 8401978804023022935}
   - component: {fileID: 8401978804023022932}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

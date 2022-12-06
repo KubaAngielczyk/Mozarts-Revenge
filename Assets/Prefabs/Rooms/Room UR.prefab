@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 401937808113526233}
   - component: {fileID: 401937808113526232}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DingDong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 401937808115480897}
   - component: {fileID: 401937808115480898}
   - component: {fileID: 401937808115480899}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Door_Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 401937808193025706}
   - component: {fileID: 401937808193025707}
   - component: {fileID: 401937808193025700}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 401937808817267691}
   - component: {fileID: 401937808817267684}
   - component: {fileID: 401937808817267685}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Dore_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 401937809463478773}
   - component: {fileID: 401937809463478774}
   - component: {fileID: 401937809463478775}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room UR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471ed99546794a4990a688d32f98df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEntered: 1
+  closeWhenEntered: 0
   doors:
   - {fileID: 401937808115480924}
   - {fileID: 401937808817267686}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 1660842127390544869}
   - component: {fileID: 1660842127390544868}
   - component: {fileID: 1660842127390544871}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 1660842128627640509}
   - component: {fileID: 1660842128627640508}
   - component: {fileID: 1660842128627640511}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2316,7 +2316,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660842128627640504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2363,22 +2363,8 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1660842128627640509}
-    m_ColliderPaths:
-    - - X: -30000000
-        Y: 90000000
-      - X: 40000000
-        Y: 90000000
-      - X: 40000000
-        Y: 100000000
-      - X: -30000000
-        Y: 100000000
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 3.999971, y: 9}
-      - {x: 3.999971, y: 10}
-      - {x: -3, y: 9.99997}
-      - {x: -2.999971, y: 9}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005

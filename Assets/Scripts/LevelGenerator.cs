@@ -18,7 +18,10 @@ public class LevelGenerator : MonoBehaviour
     private List<GameObject> layoutRoomObjects = new List<GameObject>();
     public RoomPrefabs rooms;
     private List<GameObject> generatedOutlines = new List<GameObject>();
+    public RoomCenter centerStart, centerEnd;
+    public RoomCenter[] potentialCenters;
     // Start is called before the first frame update
+    
     void Start()
     {
         Instantiate(layoutRoom, generatorPoint.position, generatorPoint.rotation).GetComponent<SpriteRenderer>().color = startColor;
@@ -53,6 +56,27 @@ public class LevelGenerator : MonoBehaviour
             CreateRoomOutline(room.transform.position);
         }
         CreateRoomOutline(endRoom.transform.position);
+
+        foreach (GameObject outline in generatedOutlines)
+        {
+            bool generateCenter = true;
+            if (outline.transform.position == Vector3.zero)
+            {
+                Instantiate(centerStart, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+                generateCenter = false;
+            }
+            if (outline.transform.position == endRoom.transform.position)
+            {
+                Instantiate(centerEnd, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+                generateCenter = false;
+            }
+            if (generateCenter)
+            {
+                int centerSelect = Random.Range(0, potentialCenters.Length);
+                Instantiate(potentialCenters[centerSelect], outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+
+            }
+        }
     }
 
     // Update is called once per frame
@@ -88,8 +112,8 @@ public class LevelGenerator : MonoBehaviour
     {
         bool roomAbove = Physics2D.OverlapCircle(roomPosition + new Vector3(0f, yOffset, 0f), .2f, whatIsRoom);
         bool roomBelow = Physics2D.OverlapCircle(roomPosition + new Vector3(0f, -yOffset, 0f), .2f, whatIsRoom);
-        bool roomLeft = Physics2D.OverlapCircle(roomPosition + new Vector3(-xOffset , 0f, 0f), .2f, whatIsRoom);
-        bool roomRight = Physics2D.OverlapCircle(roomPosition + new Vector3(xOffset , 0f, 0f), .2f, whatIsRoom);
+        bool roomLeft = Physics2D.OverlapCircle(roomPosition + new Vector3(-xOffset, 0f, 0f), .2f, whatIsRoom);
+        bool roomRight = Physics2D.OverlapCircle(roomPosition + new Vector3(xOffset, 0f, 0f), .2f, whatIsRoom);
 
         int directionCount = 0;
         if (roomAbove)
@@ -118,7 +142,7 @@ public class LevelGenerator : MonoBehaviour
             case 1:
                 if (roomAbove)
                 {
-                    generatedOutlines.Add( Instantiate(rooms.singleUp, roomPosition, transform.rotation));
+                    generatedOutlines.Add(Instantiate(rooms.singleUp, roomPosition, transform.rotation));
                 }
                 if (roomBelow)
                 {
@@ -134,7 +158,7 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             case 2:
-                if(roomAbove && roomBelow)
+                if (roomAbove && roomBelow)
                 {
                     generatedOutlines.Add(Instantiate(rooms.doubleUpDown, roomPosition, transform.rotation));
                 }
@@ -146,13 +170,13 @@ public class LevelGenerator : MonoBehaviour
                 {
                     generatedOutlines.Add(Instantiate(rooms.doubleUpRight, roomPosition, transform.rotation));
                 }
-                if (roomRight  && roomBelow)
+                if (roomRight && roomBelow)
                 {
                     generatedOutlines.Add(Instantiate(rooms.doubleRightDown, roomPosition, transform.rotation));
                 }
                 if (roomBelow && roomLeft)
                 {
-                    generatedOutlines.Add(Instantiate(rooms.doubleDownLeft , roomPosition, transform.rotation));
+                    generatedOutlines.Add(Instantiate(rooms.doubleDownLeft, roomPosition, transform.rotation));
                 }
                 if (roomLeft && roomAbove)
                 {
@@ -160,31 +184,31 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             case 3:
-                if(roomAbove && roomRight && roomBelow)
+                if (roomAbove && roomRight && roomBelow)
                 {
                     generatedOutlines.Add(Instantiate(rooms.tripleUpRightDown, roomPosition, transform.rotation));
                 }
-                if (roomRight  && roomBelow  && roomLeft)
+                if (roomRight && roomBelow && roomLeft)
                 {
                     generatedOutlines.Add(Instantiate(rooms.tripleRightDownLeft, roomPosition, transform.rotation));
                 }
                 if (roomBelow && roomLeft && roomAbove)
                 {
-                    generatedOutlines.Add(Instantiate(rooms.tripleDownLeftUp , roomPosition, transform.rotation));
+                    generatedOutlines.Add(Instantiate(rooms.tripleDownLeftUp, roomPosition, transform.rotation));
                 }
                 if (roomLeft && roomAbove && roomRight)
                 {
-                    generatedOutlines.Add(Instantiate(rooms.tripleLeftUpRight , roomPosition, transform.rotation));
+                    generatedOutlines.Add(Instantiate(rooms.tripleLeftUpRight, roomPosition, transform.rotation));
                 }
 
                 break;
             case 4:
-                if(roomBelow && roomLeft && roomAbove && roomRight)
+                if (roomBelow && roomLeft && roomAbove && roomRight)
                 {
                     generatedOutlines.Add(Instantiate(rooms.fourway, roomPosition, transform.rotation));
                 }
                 break;
-            
+
         }
     }
 }

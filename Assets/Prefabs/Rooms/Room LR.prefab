@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 141123495008338044}
   - component: {fileID: 141123495008338047}
   - component: {fileID: 141123495008338046}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471ed99546794a4990a688d32f98df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEntered: 1
+  closeWhenEntered: 0
   doors:
   - {fileID: 141123496190913135}
   - {fileID: 1539351479315092031}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 141123495732281123}
   - component: {fileID: 141123495732281122}
   - component: {fileID: 141123495732281133}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141123495820422224}
   - component: {fileID: 141123495820422225}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DingDong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,13 +294,13 @@ GameObject:
   - component: {fileID: 141123496190913122}
   - component: {fileID: 141123496190913133}
   - component: {fileID: 141123496190913132}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Dore_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &141123496190913122
 Transform:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 1399168408463548724}
   - component: {fileID: 1399168408463548725}
   - component: {fileID: 1399168408463548726}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 1399168409155902060}
   - component: {fileID: 1399168409155902061}
   - component: {fileID: 1399168409155902062}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,13 +2409,13 @@ GameObject:
   - component: {fileID: 4917632396759699211}
   - component: {fileID: 4791317537104855600}
   - component: {fileID: 3365784431576600849}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Dore_Vertical (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4917632396759699211
 Transform:
   m_ObjectHideFlags: 0
@@ -2519,7 +2519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6284070361415868957}
   - component: {fileID: 8631475792640760509}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DingDong
   m_TagString: Untagged
   m_Icon: {fileID: 0}

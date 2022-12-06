@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5746933756885250302}
   - component: {fileID: 5746933756885250301}
   - component: {fileID: 5746933756885250300}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room U
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471ed99546794a4990a688d32f98df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEntered: 1
+  closeWhenEntered: 0
   doors:
   - {fileID: 5746933757684973655}
   roomActive: 0
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 5746933757628305313}
   - component: {fileID: 5746933757628305312}
   - component: {fileID: 5746933757628305327}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,13 +209,13 @@ GameObject:
   - component: {fileID: 5746933757684973642}
   - component: {fileID: 5746933757684973641}
   - component: {fileID: 5746933757684973640}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Door_Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5746933757684973642
 Transform:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 6728011287510159798}
   - component: {fileID: 6728011287510159799}
   - component: {fileID: 6728011287510159796}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6728011287510159795}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -682,39 +682,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 6728011287510159798}
-    m_ColliderPaths:
-    - - X: -19999959
-        Y: 100000100
-      - X: -40000041
-        Y: 100000100
-      - X: -40000100
-        Y: 100000041
-      - X: -40000100
-        Y: 89999959
-      - X: -40000041
-        Y: 89999900
-      - X: -19999959
-        Y: 89999900
-      - X: -19999900
-        Y: 89999959
-      - X: -19999900
-        Y: 90000000
-      - X: 40000000
-        Y: 90000000
-      - X: 40000000
-        Y: 100000000
-      - X: -19999900
-        Y: 100000000
-      - X: -19999900
-        Y: 100000041
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: -4.00001, y: 9.000026}
-      - {x: 4, y: 9.00003}
-      - {x: 3.999971, y: 10}
-      - {x: -4.00001, y: 9.999974}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &6728011288285817578
@@ -731,7 +701,7 @@ GameObject:
   - component: {fileID: 6728011288285817582}
   - component: {fileID: 6728011288285817583}
   - component: {fileID: 6728011288285817580}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

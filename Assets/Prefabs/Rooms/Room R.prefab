@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5756528827474825862}
   - component: {fileID: 5756528827474825863}
   - component: {fileID: 5756528827474825860}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1559,7 +1559,7 @@ GameObject:
   - component: {fileID: 5756528828250483166}
   - component: {fileID: 5756528828250483167}
   - component: {fileID: 5756528828250483164}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,7 +1934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6736482528344351930}
   - component: {fileID: 6736482528344351931}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DingDong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2019,7 +2019,7 @@ GameObject:
   - component: {fileID: 6736482528398686153}
   - component: {fileID: 6736482528398686152}
   - component: {fileID: 6736482528398686151}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2144,13 +2144,13 @@ GameObject:
   - component: {fileID: 6736482528848962184}
   - component: {fileID: 6736482528848962183}
   - component: {fileID: 6736482528848962182}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Dore_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6736482528848962184
 Transform:
   m_ObjectHideFlags: 0
@@ -2255,7 +2255,7 @@ GameObject:
   - component: {fileID: 6736482530216528022}
   - component: {fileID: 6736482530216528021}
   - component: {fileID: 6736482530216528020}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Room R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471ed99546794a4990a688d32f98df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEntered: 1
+  closeWhenEntered: 0
   doors:
   - {fileID: 0}
   - {fileID: 6736482528848962181}
