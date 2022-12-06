@@ -7313,6 +7313,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7974363222344290916, guid: 7c884057be5ca944a835355fe61763fb, type: 3}
+      propertyPath: levelToLoad
+      value: Test1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c884057be5ca944a835355fe61763fb, type: 3}
 --- !u!4 &8882897958565934630 stripped

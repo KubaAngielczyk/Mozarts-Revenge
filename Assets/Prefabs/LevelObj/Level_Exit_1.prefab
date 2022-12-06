@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6792372591465063005}
   - component: {fileID: 6792372591465063004}
   - component: {fileID: 6792372591465063007}
-  m_Layer: 12
+  - component: {fileID: 7974363222344290916}
+  m_Layer: 0
   m_Name: Level_Exit_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,3 +101,16 @@ CircleCollider2D:
   m_Offset: {x: 0.02, y: 0}
   serializedVersion: 2
   m_Radius: 0.7198339
+--- !u!114 &7974363222344290916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792372591465063006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe224e0ee0a27bd4a81a04f79aef90ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 

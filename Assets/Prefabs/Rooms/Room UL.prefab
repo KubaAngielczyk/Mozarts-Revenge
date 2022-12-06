@@ -195,7 +195,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7351656247249973270}
   - component: {fileID: 7351656247249973273}
-  - component: {fileID: 7351656247249973272}
   - component: {fileID: 7351656247249973271}
   m_Layer: 11
   m_Name: Room Activator
@@ -213,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 7351656247249973269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.63, y: -0.58, z: 0}
-  m_LocalScale: {x: 35, y: 19, z: 1}
+  m_LocalScale: {x: 34, y: 17.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7351656245468057414}
   m_RootOrder: 0
@@ -244,21 +243,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7351656247249973272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7351656247249973269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6471ed99546794a4990a688d32f98df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeWhenEntered: 0
-  doors: []
-  roomActive: 0
 --- !u!212 &7351656247249973271
 SpriteRenderer:
   m_ObjectHideFlags: 0
