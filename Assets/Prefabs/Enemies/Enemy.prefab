@@ -53,6 +53,11 @@ MonoBehaviour:
   shouldRunAway: 0
   runawayRange: 0
   shouldChasePlayer: 1
+  shouldWander: 0
+  shouldPatrol: 0
+  patrolPoints: []
+  wanderLength: 0
+  pauseLength: 0
   anim: {fileID: 761970618019011110}
   health: 150
   deathSplatters:
@@ -62,7 +67,7 @@ MonoBehaviour:
   - {fileID: 913820886689505199, guid: 9a1cdbc5cf46ff44285e671b558052fb, type: 3}
   hitEffect: {fileID: 5913837534266958241, guid: c90a1628dc288e64eb1f9437940e06be, type: 3}
   shouldShoot: 1
-  bullet: {fileID: 4244313616292099479, guid: 17032da41d4522d45885cfc6e984c8e0, type: 3}
+  bullet: {fileID: 4244313616292099479, guid: 2031a229b6595684393dff364dcd1342, type: 3}
   firePoint: {fileID: 7104033941934310716}
   fireRate: 0.2
   theBody: {fileID: 761970618019011105}
