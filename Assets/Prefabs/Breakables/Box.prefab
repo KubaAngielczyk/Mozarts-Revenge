@@ -109,7 +109,8 @@ MonoBehaviour:
   shouldDropItem: 1
   itemsToDrop:
   - {fileID: 5791864128525931036, guid: 8412e5cae0c83134ab5a723968a2908c, type: 3}
-  itemDropPercent: 10
+  - {fileID: 493811917560512922, guid: 51a694ea588f9fc4b9001a298dbad9c3, type: 3}
+  itemDropPercent: 5
   breakSound: 0
 --- !u!114 &1288014969474860710
 MonoBehaviour:

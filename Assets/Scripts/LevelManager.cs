@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public float waitToLoad = 4f;
+    public int currentCoins;
     public string nextLevel;
     private void Awake()
     {
@@ -13,7 +14,7 @@ public class LevelManager : MonoBehaviour
     }
     void Start()
     {
-        
+        UIController.instance.coinText.text = currentCoins.ToString();
     }
 
     // Update is called once per frame
@@ -30,5 +31,22 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(nextLevel);
 
         
+    }
+
+    public void GetCoins(int amount)
+    {
+        currentCoins += amount;
+        UIController.instance.coinText.text = currentCoins.ToString();
+    }
+
+    public void SpendCoins(int amount)
+    {
+        currentCoins -= amount;
+
+        if(currentCoins < 0)
+        {
+            currentCoins = 0;
+        }
+        UIController.instance.coinText.text = currentCoins.ToString();
     }
 }

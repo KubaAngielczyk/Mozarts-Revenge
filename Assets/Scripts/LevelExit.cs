@@ -23,6 +23,7 @@ public class LevelExit : MonoBehaviour
         {
             //SceneManager.LoadScene(levelToLoad);
             StartCoroutine(LevelManager.instance.LevelEnd());
+            Application.Quit();
         }
     }
 }

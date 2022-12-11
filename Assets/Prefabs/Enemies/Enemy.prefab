@@ -66,6 +66,9 @@ MonoBehaviour:
   - {fileID: 7442649814160499735, guid: 27bc33d5769b9fc4d92e86f5a709ad2e, type: 3}
   - {fileID: 913820886689505199, guid: 9a1cdbc5cf46ff44285e671b558052fb, type: 3}
   hitEffect: {fileID: 5913837534266958241, guid: c90a1628dc288e64eb1f9437940e06be, type: 3}
+  shouldDropItem: 0
+  itemsToDrop: []
+  itemDropPercent: 0
   shouldShoot: 1
   bullet: {fileID: 4244313616292099479, guid: 2031a229b6595684393dff364dcd1342, type: 3}
   firePoint: {fileID: 7104033941934310716}
@@ -105,7 +108,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.36}
+  m_Offset: {x: 0.2, y: 0.36}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -145,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 761970618019011108}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.16, y: 0.42, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 6.080748, y: 6.080748, z: 6.080748}
   m_Children: []
   m_Father: {fileID: 761970617249031371}
   m_RootOrder: 0
@@ -191,7 +194,7 @@ SpriteRenderer:
   m_SortingLayerID: -686696329
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2192450021786810173, guid: 02027016afbc5d544ab92ba819bc8094, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d144a3f4a3485554da005a75b367c2f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
