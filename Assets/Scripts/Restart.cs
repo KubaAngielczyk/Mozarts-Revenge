@@ -18,7 +18,8 @@ public class Restart : MonoBehaviour
         
             if (Input.GetKeyDown("f"))
             {
-            again();
+            
+                again();
                 
             }
         

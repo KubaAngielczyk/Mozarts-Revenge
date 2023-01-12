@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour
                     if(wanderCounter > 0)
                     {
                         wanderCounter -= Time.deltaTime;
-                        //move the enemy
+                       
                         moveDirection = wanderDirection;
 
                         if(wanderCounter <= 0)
